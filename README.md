@@ -50,5 +50,7 @@ Prajwal R
 GitHub: @prajwalr1008
 
 ## License & Usage
+
 Copyright © 2026 Prajwal R. All Rights Reserved.
+
 This project is shared for viewing and educational purposes. The source code may not be copied, reproduced, modified, redistributed, or used for commercial purposes without prior written permission from the author.
