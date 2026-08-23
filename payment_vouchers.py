@@ -11,7 +11,7 @@ def create_payment_vouchers(date, account_name, ledger_name, amount, narration):
  <BODY>
   <IMPORTDATA>
    <REQUESTDESC>
-    <REPORTNAME>All Masters</REPORTNAME>
+    <REPORTNAME>Vouchers</REPORTNAME>
     <STATICVARIABLES>
      <SVCURRENTCOMPANY>PRAJWAL &amp; COMPANY</SVCURRENTCOMPANY>
     </STATICVARIABLES>
@@ -26,15 +26,16 @@ def create_payment_vouchers(date, account_name, ledger_name, amount, narration):
         <PERSISTEDVIEW>Accounting Voucher View</PERSISTEDVIEW>
         <EFFECTIVEDATE>{date}</EFFECTIVEDATE>
         <ALLLEDGERENTRIES.LIST>
-         <LEDGERNAME>{ledger_name}</LEDGERNAME>
-         <ISDEEMEDPOSITIVE>Yes</ISDEEMEDPOSITIVE>
-         <AMOUNT>-{amount}</AMOUNT>
-        </ALLLEDGERENTRIES.LIST>
-        <ALLLEDGERENTRIES.LIST>
-         <LEDGERNAME>{account_name}</LEDGERNAME>
-         <ISDEEMEDPOSITIVE>No</ISDEEMEDPOSITIVE>
-         <AMOUNT>{amount}</AMOUNT>
-        </ALLLEDGERENTRIES.LIST>
+ <LEDGERNAME>{ledger_name}</LEDGERNAME>
+ <ISDEEMEDPOSITIVE>No</ISDEEMEDPOSITIVE>
+ <AMOUNT>{amount}</AMOUNT>
+</ALLLEDGERENTRIES.LIST>
+
+<ALLLEDGERENTRIES.LIST>
+ <LEDGERNAME>{account_name}</LEDGERNAME>
+ <ISDEEMEDPOSITIVE>Yes</ISDEEMEDPOSITIVE>
+ <AMOUNT>-{amount}</AMOUNT>
+</ALLLEDGERENTRIES.LIST>
       </VOUCHER>
     </TALLYMESSAGE>
    </REQUESTDATA>
@@ -58,6 +59,7 @@ for _, row in df.iterrows():
         amount = row["Amount"],
         narration = row["Narration"]
     )
+    print(xml_data)
     send_to_tally(xml_data)
 
 
