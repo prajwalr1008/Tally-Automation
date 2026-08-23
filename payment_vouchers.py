@@ -13,7 +13,7 @@ def create_payment_vouchers(date, account_name, ledger_name, amount, narration):
    <REQUESTDESC>
     <REPORTNAME>All Masters</REPORTNAME>
     <STATICVARIABLES>
-     <SVCURRENTCOMPANY>KRFIN</SVCURRENTCOMPANY>
+     <SVCURRENTCOMPANY>PRAJWAL & COMPANY</SVCURRENTCOMPANY>
     </STATICVARIABLES>
    </REQUESTDESC>
    <REQUESTDATA>
