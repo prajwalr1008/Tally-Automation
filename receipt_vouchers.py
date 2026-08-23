@@ -13,7 +13,7 @@ def create_receipt_vouchers(date, account_name, ledger_name, amount, narration):
    <REQUESTDESC>
     <REPORTNAME>All Masters</REPORTNAME>
     <STATICVARIABLES>
-     <SVCURRENTCOMPANY>PRAJWAL & COMPANY</SVCURRENTCOMPANY>
+     <SVCURRENTCOMPANY>PRAJWAL &amp; COMPANY</SVCURRENTCOMPANY>
     </STATICVARIABLES>
    </REQUESTDESC>
    <REQUESTDATA>
